@@ -1,0 +1,111 @@
+2014/07/24 18:45:18 [error] [php] include(../models/GoodsForm.php): failed to open stream: No such file or directory (/home/max/public_html/test/protected/controllers/GoodsController.php:5)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/controllers/GoodsController.php (5)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (5)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:45:56 [error] [php] include(./models/GoodsForm.php): failed to open stream: No such file or directory (/home/max/public_html/test/protected/controllers/GoodsController.php:5)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/controllers/GoodsController.php (5)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (5)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:51:33 [error] [exception.CException] exception 'CException' with message 'Property "GoodsForm.menu" is not defined.' in /home/max/public_html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/public_html/test/protected/controllers/GoodsController.php(11): CComponent->__get('menu')
+#1 /home/max/public_html/yii/framework/web/actions/CInlineAction.php(49): GoodsController->actionIndex()
+#2 /home/max/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /home/max/public_html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /home/max/public_html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /home/max/public_html/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#6 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('goods/index')
+#7 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home/max/public_html/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/~max/test/index.php?r=goods/index
+---
+2014/07/24 18:51:43 [error] [php] array_push() expects parameter 1 to be array, null given (/home/max/public_html/test/protected/models/GoodsForm.php:20)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/actions/CInlineAction.php(49): GoodsController->actionIndex()
+#1 /home/max/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#3 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#4 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#5 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/models/GoodsForm.php (20)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (11)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:52:48 [error] [php] array_push() expects parameter 1 to be array, null given (/home/max/public_html/test/protected/models/GoodsForm.php:22)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/actions/CInlineAction.php(49): GoodsController->actionIndex()
+#1 /home/max/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#3 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#4 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#5 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/models/GoodsForm.php (22)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (11)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:53:05 [error] [php] array_push() expects parameter 1 to be array, null given (/home/max/public_html/test/protected/models/GoodsForm.php:22)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/actions/CInlineAction.php(49): GoodsController->actionIndex()
+#1 /home/max/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#3 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#4 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#5 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/models/GoodsForm.php (22)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (11)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:53:33 [error] [php] Undefined index: name (/home/max/public_html/test/protected/controllers/GoodsController.php:13)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#1 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#2 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#3 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/controllers/GoodsController.php (13)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:54:19 [error] [php] Undefined index: name (/home/max/public_html/test/protected/controllers/GoodsController.php:13)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#1 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#2 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#3 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/controllers/GoodsController.php (13)
+in /home/max/public_html/test/index.php (13)
+2014/07/24 18:56:03 [error] [php] Undefined variable: data (/home/max/public_html/test/protected/models/GoodsForm.php:22)
+Stack trace:
+#0 /home/max/public_html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /home/max/public_html/yii/framework/web/CController.php(286): GoodsController->runAction()
+#2 /home/max/public_html/yii/framework/web/CController.php(265): GoodsController->runActionWithFilters()
+#3 /home/max/public_html/yii/framework/web/CWebApplication.php(282): GoodsController->run()
+#4 /home/max/public_html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /home/max/public_html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /home/max/public_html/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/~max/test/index.php?r=goods/index
+in /home/max/public_html/test/protected/models/GoodsForm.php (22)
+in /home/max/public_html/test/protected/controllers/GoodsController.php (11)
+in /home/max/public_html/test/index.php (13)
