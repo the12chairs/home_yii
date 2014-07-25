@@ -32,7 +32,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update', 'my', 'myname'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -51,10 +51,49 @@ class UserController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+		$this->render('view', array(
 			'model'=>$this->loadModel($id),
 		));
 	}
+
+
+
+
+	public function actionMy(){
+		
+		$model = Post::model()->findByAttributes(array('author_id' => Yii::app()->user->id));
+		var_dump($model);
+	}
+
+
+
+
+
+
+
+
+
+	public function actionMyName(){
+		
+
+		//User::model()->findByAttributes(array('id' => Yii::app()->user->id))['username']
+		$crit = new CDbCriteria;
+		$crit->with = array("author");
+		$crit->addCondition("username = :username");
+		$crit->params = array(":username" => Yii::app()->user->name);
+		$models = Post::model()->findAll($crit);
+
+		var_dump($models);
+	}
+
+
+
+
+
+
+
+
+
 
 	/**
 	 * Creates a new model.

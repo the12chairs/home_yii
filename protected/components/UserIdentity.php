@@ -17,12 +17,13 @@ class UserIdentity extends CUserIdentity
 	 */
 
 	private $_id;
-	
+	private $_username;
 
 	public function authenticate()
     {
 
         $record=User::model()->findByAttributes(array('username'=>$this->username));
+        $this->_username = $this->username;
         /*var_dump($this->password);
         var_dump(CPasswordHelper::hashPassword($this->password));
     	var_dump($record->password);*/
@@ -42,5 +43,8 @@ class UserIdentity extends CUserIdentity
     public function getId()
     {
         return $this->_id;
+    }
+    public function getUsername(){
+        return $this->_username;
     }
 }
