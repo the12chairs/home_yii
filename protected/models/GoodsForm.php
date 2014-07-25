@@ -13,15 +13,21 @@ class GoodsForm extends CFormModel
   public $price;
   public $all;
 
-
-  public function menu() {
+  public function getAll() {
     
     if(!isset($this->all)){
       $this->all = array();
     }
-      array_push($this->all, array("id" => 1, "name" => "comp", "about" => "Cool thing", "price" => 100));
+    for($i = 0; $i <10; $i++)
+      array_push(
+        $this->all, 
+        array("id" => $i, "name" => "comp", "about" => "Cool thing", "price" => rand() % 10000));
 
     return $this->all;
   }
 
+  public function getById($id){
+    foreach($this->all as $i)
+      if($i['id'] == $id) return $i;
+  }
 }

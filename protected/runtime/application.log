@@ -109,3 +109,69 @@ REQUEST_URI=/~max/test/index.php?r=goods/index
 in /home/max/public_html/test/protected/models/GoodsForm.php (22)
 in /home/max/public_html/test/protected/controllers/GoodsController.php (11)
 in /home/max/public_html/test/index.php (13)
+2014/07/25 14:53:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "users".' in /var/www/html/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('users')
+#1 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/html/home_yii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/home_yii/index.php/users
+---
+2014/07/25 15:28:47 [error] [exception.CException] exception 'CException' with message 'Property "User.title" is not defined.' in /var/www/html/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/html/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('title')
+#1 /var/www/html/home_yii/protected/components/UserIdentity.php(32): CActiveRecord->__get('title')
+#2 /var/www/html/home_yii/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /var/www/html/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 /var/www/html/home_yii/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#8 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/html/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/html/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/html/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#12 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/html/home_yii/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/home_yii/index.php/site/login
+HTTP_REFERER=http://localhost/home_yii/index.php/site/login
+---
+2014/07/25 15:34:44 [error] [php] Undefined variable: record (/var/www/html/home_yii/protected/components/UserIdentity.php:25)
+Stack trace:
+#0 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#1 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/html/home_yii/protected/controllers/SiteController.php(94): LoginForm->validate()
+#3 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/html/home_yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/home_yii/index.php/site/login
+in /var/www/html/home_yii/protected/components/UserIdentity.php (25)
+in /var/www/html/home_yii/protected/models/LoginForm.php (52)
+in /var/www/html/home_yii/protected/controllers/SiteController.php (94)
+2014/07/25 15:42:33 [error] [php] include(CPasswordHepler.php): failed to open stream: No such file or directory (/var/www/html/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/html/home_yii/protected/components/UserIdentity.php(31): spl_autoload_call()
+#1 /var/www/html/home_yii/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /var/www/html/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
+#3 /var/www/html/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#4 /var/www/html/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#5 /var/www/html/home_yii/protected/controllers/SiteController.php(94): LoginForm->validate()
+#6 /var/www/html/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www/html/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www/html/yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www/html/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www/html/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www/html/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/html/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/html/home_yii/index.php(13): CWebApplication->run()
+REQUEST_URI=/home_yii/index.php/site/login
+in /var/www/html/home_yii/protected/components/UserIdentity.php (31)
+in /var/www/html/home_yii/protected/models/LoginForm.php (52)
+in /var/www/html/home_yii/protected/controllers/SiteController.php (94)
